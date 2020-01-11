@@ -69,7 +69,7 @@
 }
 #content-top {
     height: 650px;
-    background-image: url("library/images/home_boot.jpg");
+    background-image: url("../images/home_boot.jpg");
     /*background-image: url(https://assets.website-files.com/5d013b7…/5d01425…_kal-visuals-1169715-unsplash.jpg);*/
     background-size: cover;
     background-position: 50% 50%;
