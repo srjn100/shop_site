@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>site</title>
+    <link rel="stylesheet" href="library/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="library/iconfont/material-icons.css">
+    <script src="library/js/jquery-3.4.1.min.js"></script>
+    <script src="library/js/popper.min.js"></script>
+    <script src="library/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <style>
+        @font-face {
+            font-family: Oswalda;
+            src: url(library/fonts/Oswald-Regular.ttf);
+        }
+        @font-face {
+            font-family: Sorts Mill Goudy;
+            src: url(library/fonts/sortsmillgoudy-regular.ttf);
+        }
+        @font-face {
+            font-family: Karla;
+            src: url(library/fonts/karla-regular.ttf);
+        }
+
+        .navbar-collapse a {
+            font: 16px Oswalda, sans-serif;
+            color: #004069;
+        }
+
+        .btn-group i {
+            color: #004069;
+        }
+        .navbar .btn{
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        .bg-fff{
+            background-color: #ffffff;
+        }
+        .shop-left{
+            width: 15%;
+            margin-right: 2%;
+            font: 17px Karla, sans-serif;
+            color: #6c757d;
+        }
+        .mini-title{
+            padding: 5px;
+            font-size: 15px;
+        }
+        .shop-right{
+            width: 83%;
+            color: #004069;
+            font: bold 17px Karla, sans-serif;
+        }
+        .shop-image{
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 120px;
+            width: 120px;
+        }
+        .item-name{
+            font:20.5px 'Sorts Mill Goudy', sans-serif;
+
+        }
+        .price{
+            font: bold 17px Karla, sans-serif;
+        }
+        .strike-price{
+            text-decoration: line-through;
+            font-style: italic;
+            color: #6c757d;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font: bold 17px Karla, sans-serif;
+        }
+        #content{
+            font-family: 'Sorts Mill Goudy', sans-serif;
+            color: #004069;
+            padding-bottom: 50px;
+        }
+        #content-top {
+            height: 650px;
+            background-image: url("library/images/home_boot.jpg");
+            /*background-image: url(https://assets.website-files.com/5d013b7…/5d01425…_kal-visuals-1169715-unsplash.jpg);*/
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        .content-heading,.content-flex{
+            text-align: center;
+            padding:50px 10px 10px 0;
+        }
+        .title{
+            font-size: 18px;
+            color: #6c757d;
+        }
+        .big-title{
+            font-size: 35px;
+        }
+        .content-title{
+            padding: 5px;
+            font-size: 15px;
+            color: #6c757d;
+        }
+
+        .content-image{
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 170px;
+            width: 170px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("modules/header.html", function () {
+                $("#shop-btn").click(function () {
+                    $(".navbar-toggler").click();
+                    if ($("#shop-btn i").text() == "keyboard_arrow_right")
+                        $("#shop-btn i").text("keyboard_arrow_down");
+                    else
+                        $("#shop-btn i").text("keyboard_arrow_right");
+                });
+                $(".navbar-toggler").click(function () {
+                    if ($(".navbar-toggler i").text() == "menu")
+                        $(".navbar-toggler i").text("close");
+                    else
+                        $(".navbar-toggler i").text("menu");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="fixed-top bg-fff" id="header"></div>
+<div class="d-flex flex-column" id="content">
+    <div class="" id="content-top"></div>
+    <div class="content-wrapper">
+        <div class="content-heading container">
+            <div class="title">Favorites</div>
+            <div class="big-title h1">Not Just beautiful But Also Comfortable</div>
+        </div>
+        <div class="content-flex d-flex flex-wrap justify-content-around text-center">
+            <div class="content-item p-3">
+                    <div class="content-title">Boots</div>
+                    <div class="content-image" style="background-image: url('library/images/shoe.jpg');"></div>
+                    <div class="item-name">Shoe 1</div>
+                    <div class="strike-price">$500 USD</div>
+                    <div class="price">$400 USD</div>
+            </div>
+            <div class="content-item p-3">
+                <div class="content-title">Comfort</div>
+                    <div class="content-image" style="background-image: url('library/images/shoe.jpg');"></div>
+                    <div class="item-name">Shoe 2</div>
+                    <div class="strike-price">$500 USD</div>
+                    <div class="price">$400 USD</div>
+            </div>
+            <div class="content-item p-3">
+                <div class="content-title">Casual</div>
+                    <div class="content-image" style="background-image: url('library/images/shoe.jpg');"></div>
+                    <div class="item-name">Shoe 3</div>
+                    <div class="strike-price">$500 USD</div>
+                    <div class="price">$400 USD</div>
+            </div>
+            <div class="content-item p-3">
+                <div class="content-title">Boots</div>
+                    <div class="content-image" style="background-image: url('library/images/shoe.jpg');"></div>
+                    <div class="item-name">Shoe 4</div>
+                    <div class="strike-price">$500 USD</div>
+                    <div class="price">$400 USD</div>
+            </div>
+        </div>
+    </div>
+    <div class="content-selection"></div>
+    <div class="content-section"></div>
+    <div class="content-section"></div>
+    <div class="content-section"></div>
+    <div class="content-section"></div>
+
+
+</div>
+
+</body>
+</html>
